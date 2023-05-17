@@ -1,5 +1,5 @@
 <?php
-include __DIR__ . '../Models/AnimalCategory.php';
+include __DIR__ . '/../Models/AnimalCategory.php';
 
 
 $products = [

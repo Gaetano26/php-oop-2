@@ -27,7 +27,7 @@ class AnimalCategory extends Product
     public function getIcon()
     {
         if (in_array($this->animal_type, $this->availableIcon)) {
-            return "<i class='fa-solid fa-$this->animal_type'></i>";
+            return "<i class='ico fa-solid fa-$this->animal_type'></i>";
         } else {
             return "<span>Unavailable</span>";
         }
