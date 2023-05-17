@@ -19,8 +19,8 @@ include __DIR__ . '/Database/db.php';
                              <?php echo $product->getIcon() ?>
                         </div>
 
-                        <div class="card-body">
-                            <h3 class="card-title fs-6"> <?php echo $product->title ?></h3>
+                        <div class="card-body mt-3">
+                            <h1 class="card-title fs-3"> <?php echo $product->title ?></h1>
                             <p> Prezzo:<?php echo $product->price ?>€</p>
                             <p> Genere: <?php echo $product->category->genre ?></p>
                             <p> Tipologia: <?php echo $product->category->type ?></p>

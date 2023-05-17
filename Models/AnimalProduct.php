@@ -4,7 +4,7 @@ include __DIR__ . '/Category.php';
 /**
  * Summary Class AnimalCategory
  */
-class AnimalCategory extends Product
+class AnimalProduct extends Product
 {
     public string $animal_type;
 
