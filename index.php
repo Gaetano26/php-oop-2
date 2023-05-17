@@ -12,7 +12,7 @@ include __DIR__ . '/Database/db.php';
    <div class="row">
     
         <?php foreach ($products as $product) { ?>
-        <div class="col col-lg-3">
+        <div class="col col-lg-4">
                     <div class="card p-3 ms-3 mt-4">
                         <div class="card-img">
                             <img class="img-fluid" src=<?php echo $product->image; ?> alt="">
