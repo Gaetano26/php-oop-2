@@ -33,7 +33,7 @@ include __DIR__ . '/Database/db.php';
                             <p> Prezzo:<?php echo $product->price ?>€</p>
                             <p> Genere: <?php echo $product->category->genre ?></p>
                             <p> Tipologia: <?php echo $product->category->type ?></p>
-                            <p> peso: <?php echo $product->category->weight ?></p>
+                            <p> peso: <?php echo $product->category->weight ?>kg</p>
                            
 
                         </div>
