@@ -6,7 +6,8 @@ include __DIR__ . '/Category.php';
  */
 class AnimalProduct extends Product
 {
-    public string $animal_type;
+
+     public string $animal_type;
 
     public object $category;
 
@@ -17,7 +18,7 @@ class AnimalProduct extends Product
 
     
 
-    public function __construct( string $title, int $price ,string $image, string $animal_type, Category $category)
+    public function __construct( string $title, int $price ,string $image, string $animal_type, Category $category ,)
     {
         parent::__construct($title, $price , $image);
         $this->animal_type = $animal_type;
@@ -29,7 +30,11 @@ class AnimalProduct extends Product
         if (in_array($this->animal_type, $this->availableIcon)) {
             return "<i class='fs-3 fa-solid fa-$this->animal_type'></i>";
         } else {
-            return "<span>Unavailable</span>";
+           throw new Exception('Categoria non disponibile');
+           
         }
     }
+
+  
 }
+

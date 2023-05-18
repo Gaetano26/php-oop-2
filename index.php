@@ -16,7 +16,16 @@ include __DIR__ . '/Database/db.php';
                     <div class="card p-3 ms-3 mt-4">
                         <div class="card-img">
                             <img class="img-fluid" src=<?php echo $product->image; ?> alt="">
-                             <?php echo $product->getIcon() ?>
+                            <?php if ($product->getIcon()): ?>
+                               <?php echo $product->getIcon(); ?>
+                            <?php else: ?>
+                               <?php try {
+                                  $product->getIcon();
+                               } catch (Exception $e) {
+                                   echo $e->getMessage();
+                               } ?>
+                            <?php endif ?>
+                        
                         </div>
 
                         <div class="card-body mt-3">
@@ -24,6 +33,7 @@ include __DIR__ . '/Database/db.php';
                             <p> Prezzo:<?php echo $product->price ?>€</p>
                             <p> Genere: <?php echo $product->category->genre ?></p>
                             <p> Tipologia: <?php echo $product->category->type ?></p>
+                            <p> peso: <?php echo $product->category->weight ?></p>
                            
 
                         </div>
