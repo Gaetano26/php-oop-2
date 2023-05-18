@@ -7,6 +7,7 @@ include './Views/header.php';
 
 include __DIR__ . '/Database/db.php';
 
+
 ?>
  <main class="container">
    <div class="row">
@@ -16,16 +17,8 @@ include __DIR__ . '/Database/db.php';
                     <div class="card p-3 ms-3 mt-4">
                         <div class="card-img">
                             <img class="img-fluid" src=<?php echo $product->image; ?> alt="">
-                            <?php if ($product->getIcon()): ?>
                                <?php echo $product->getIcon(); ?>
-                            <?php else: ?>
-                               <?php try {
-                                  $product->getIcon();
-                               } catch (Exception $e) {
-                                   echo $e->getMessage();
-                               } ?>
-                            <?php endif ?>
-                        
+                            
                         </div>
 
                         <div class="card-body mt-3">
