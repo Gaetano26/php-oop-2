@@ -24,11 +24,6 @@ class AnimalProduct extends Product
         $this->animal_type = $animal_type;
         $this->category = $category;
 
-        try {
-            $this->getIcon();
-         } catch (Exception $e) {
-             echo 'Errore: ' . $e->getMessage();
-         }
     }
 
     public function getIcon()
@@ -40,8 +35,14 @@ class AnimalProduct extends Product
            
            
         }
+        
     }
 
+        /*try {
+            $this->getIcon();
+         } catch (Exception $e) {
+             echo 'Errore: ' . $e->getMessage();
+         }*/
   
 }
 

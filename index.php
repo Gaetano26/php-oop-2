@@ -17,7 +17,12 @@ include __DIR__ . '/Database/db.php';
                     <div class="card p-3 ms-3 mt-4">
                         <div class="card-img">
                             <img class="img-fluid" src=<?php echo $product->image; ?> alt="">
-                               <?php echo $product->getIcon(); ?>
+                               <?php try{
+                                echo $product->getIcon();
+                               } catch (Exception $e) {
+                                  echo 'Immagine mancante';
+                               }
+                                ?>
                             
                         </div>
 
