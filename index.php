@@ -20,7 +20,7 @@ include __DIR__ . '/Database/db.php';
                                <?php try{
                                 echo $product->getIcon();
                                } catch (Exception $e) {
-                                  echo 'Immagine mancante';
+                                  echo 'Icona non disponibile';
                                }
                                 ?>
                             
